@@ -1,0 +1,39 @@
+*{
+    box-sizing : border-box;
+    padding: 0px;
+    margin: 0px;
+
+}
+:root {
+    --primary:rgb(168, 7, 87);
+    --secondary:white;
+    --secondary-light:gray;
+    --dark1:black;
+    --dark2:black;
+}
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+}
+.navbar ul{
+    display: flex;
+ 
+}
+.navbar a{
+    font-size: 1.5 rem;
+    padding: 10px;
+    text-decoration: none;
+    color:white;
+    margin: 20px;
+}
+.contenedor-nav{
+    background-color: var(--dark2);
+    position: relative;
+}
+.contenedor-nav img{
+    width: 100%;
+    height: 530px;
+    opacity: 0.35;
+}
+
+/*Inicio
