@@ -10,6 +10,8 @@
     --secondary-light:gray;
     --dark1:black;
     --dark2:black;
+    --dark-blue: hsl(198, 62%, 26%);
+    --very-dark-grayish-blue:hsl(232, 10%, 55%);
 }
 .navbar{
     display: flex;
@@ -37,3 +39,48 @@
 }
 
 /*Inicio
+
+/*POR QUE ELERGIRNOS?*/
+
+.porque{
+    background: white;
+    text-align: center;
+    columns: 3 300px;
+    margin: 100px;
+    
+}
+.porque_title{
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-transform:  uppercase;
+    color: var(--very-dark-grayish-blue);
+    font-family: var (--font1) ;
+   
+}
+
+ .porque_container{
+    padding:60px 0;
+    display:grid;
+    gap: 6rem;
+    
+    
+ }
+  .porque_img{
+    width:50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .porque_parrafo{
+    color: var(--dark-blue);
+    line-height:1.5;
+    margin: 1.5rem;
+    font-size:12px ;
+  }
+  .porque_nombre{
+    color: black;
+    font-family: var(--font1);
+    margin-bottom: .7rem;
+    font-size:22px ;
+  }
