@@ -1,9 +1,15 @@
-*{
-    box-sizing : border-box;
-    padding: 0px;
-    margin: 0px;
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@200;300;400;500;600;700;800&family=Patua+One&display=swap');
+/*
+font-family: 'Anek Malayalam', sans-serif;
+font-family: 'Patua One', cursive;
+*/
 
+*, body{
+    box-sizing : border-box;
+    padding: 0;
+    margin: 0;
 }
+
 :root {
     --primary:rgb(168, 7, 87);
     --secondary:white;
@@ -13,6 +19,12 @@
     --dark-blue: hsl(198, 62%, 26%);
     --very-dark-grayish-blue:hsl(232, 10%, 55%);
 }
+
+a, a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
 .navbar{
     display: flex;
     justify-content: flex-end;
@@ -22,7 +34,7 @@
  
 }
 .navbar a{
-    font-size: 1.5 rem;
+    font-size: 1.5rem;
     padding: 10px;
     text-decoration: none;
     color:white;
@@ -84,3 +96,56 @@
     margin-bottom: .7rem;
     font-size:22px ;
   }
+
+/********** GLOBALES **********/
+.section-padding {
+    padding: 5% 3%;
+}
+
+.background-claro {
+    background-color: var(--secondary);
+    color: var(--dark1);
+}
+
+.background-oscuro {
+    background-color: var(--dark1);
+    color: var(--secondary);
+}
+
+/********** EQUIPO **********/
+.equipo {
+    font-family: 'Anek Malayalam', sans-serif;
+}
+
+.equipo-texto h1 {
+    font-family: 'Patua One', cursive;
+}
+
+.img-fluid {
+    border-radius: 10px;
+    -webkit-box-shadow: -4px 5px 8px -3px rgb(168 7 87 / 67%);
+    -moz-box-shadow: -4px 5px 8px -3px rgb(168 7 87 / 67%);
+    box-shadow: -4px 5px 8px -3px rgb(168 7 87 / 67%);
+}
+
+.miembro:first-child {
+    margin-bottom: 42px;
+}
+
+.miembro-nombre {
+    margin-bottom: 0;
+}
+
+.miembro-descripcion {
+   margin-top: 12px;
+}
+
+.miembro span a{
+    font-size: 1.3rem;
+    margin-right: 8px;
+}
+
+.miembro span a:hover {
+    font-size: 1.5rem;
+    color: var(--primary);
+}

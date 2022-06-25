@@ -1,0 +1,26 @@
+{
+  "equipo": [
+    {
+      "key": 1,
+      "initial": "L",
+      "nombre": "Lorenna León",
+      "posicion": "Desarrolladora de Software",
+      "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "imgUrl": "",
+      "linkedinUrl": "",
+      "instagramUrl": "http://instagram.com/lore_lung",
+      "portfolioUrl": ""
+    },
+    {
+      "key": 2,
+      "initial": "H",
+      "nombre": "Melissa Huerta",
+      "posicion": "Desarrolladora de Software",
+      "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "imgUrl": "",
+      "linkedinUrl": "https://www.linkedin.com/in/melissahuertadev/",
+      "instagramUrl": "http://instagram.com/melissahuerta.dev/",
+      "portfolioUrl": "https://melissahuerta.dev"
+    }
+  ]
+}
