@@ -27,6 +27,10 @@ a:hover {
   color: inherit;
 }
 
+p {
+  margin-bottom: 0;
+}
+
 .navbar {
   display: flex;
   justify-content: flex-end;
@@ -123,6 +127,11 @@ a:hover {
   color: var(--secondary);
 }
 
+.background-pink {
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
 /********** EQUIPO **********/
 .equipo {
   font-family: 'Anek Malayalam', sans-serif;
@@ -148,7 +157,7 @@ a:hover {
 }
 
 .miembro-descripcion {
-  margin-top: 12px;
+  margin: 12px 0;
 }
 
 .miembro span a {
@@ -196,7 +205,6 @@ a:hover {
   padding: 20px;
   margin: 15px;
   cursor: pointer;
-
 }
 
 .perfil-img {
@@ -250,4 +258,40 @@ a:hover {
 .comentarios_clientes p {
   color: #4b4b4b;
   font-size: 15PX
+}
+
+/********** FOOTER **********/
+.footer-padding {
+  padding: 6% 5%;
+}
+
+.footer-text {
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+.footer-text span {
+  font-weight: 500;
+}
+
+.footer-text span:hover {
+  color: var(--secondary-light);
+}
+
+@media only screen and (min-width: 600px) {
+  .footer-padding {
+    padding: 3% 5%;
+  }
+
+  .footer-text {
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (min-width: 992px) {
+  .footer-padding {
+    padding: 2% 5%;
+  }
 }
