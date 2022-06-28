@@ -60,7 +60,34 @@ p {
   opacity: 0.35;
 }
 
-/*Inicio
+/********** INICIO **********/
+.background-inicio {
+  background-image: url("./img/fondo-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.inicio-texto {
+  font-family: 'Anek Malayalam', sans-serif;
+}
+
+.inicio-titulo {
+  font-family: 'Patua One', cursive;
+  font-size: 2.7rem;
+}
+
+.btn-contacto {
+  display: block;
+  width: fit-content;
+  background-color: var(--primary);
+  color: var(--secondary);
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin: auto;
+  margin-top: 20px;
+}
 
 /*POR QUE ELERGIRNOS?*/
 
@@ -87,8 +114,6 @@ p {
   padding: 60px 0;
   display: grid;
   gap: 6rem;
-
-
 }
 
 .porque_img {
@@ -240,7 +265,6 @@ p {
 .name-user span {
   color: #979797;
   font-size: 1.1rem;
-
 }
 
 .resenas {
@@ -288,7 +312,11 @@ p {
   }
 }
 
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+  .inicio-titulo {
+    font-size: 3.2rem;
+  }
+}
 
 @media only screen and (min-width: 992px) {
   .footer-padding {
