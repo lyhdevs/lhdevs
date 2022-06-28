@@ -27,6 +27,10 @@ a:hover {
   color: inherit;
 }
 
+p {
+  margin-bottom: 0;
+}
+
 .navbar {
   display: flex;
   justify-content: flex-end;
@@ -56,7 +60,34 @@ a:hover {
   opacity: 0.35;
 }
 
-/*Inicio
+/********** INICIO **********/
+.background-inicio {
+  background-image: url("./img/fondo-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.inicio-texto {
+  font-family: 'Anek Malayalam', sans-serif;
+}
+
+.inicio-titulo {
+  font-family: 'Patua One', cursive;
+  font-size: 2.7rem;
+}
+
+.btn-contacto {
+  display: block;
+  width: fit-content;
+  background-color: var(--primary);
+  color: var(--secondary);
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin: auto;
+  margin-top: 20px;
+}
 
 /*POR QUE ELERGIRNOS?*/
 
@@ -83,8 +114,6 @@ a:hover {
   padding: 60px 0;
   display: grid;
   gap: 6rem;
-
-
 }
 
 .porque_img {
@@ -123,6 +152,11 @@ a:hover {
   color: var(--secondary);
 }
 
+.background-pink {
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
 /********** EQUIPO **********/
 .equipo {
   font-family: 'Anek Malayalam', sans-serif;
@@ -148,7 +182,7 @@ a:hover {
 }
 
 .miembro-descripcion {
-  margin-top: 12px;
+  margin: 12px 0;
 }
 
 .miembro span a {
@@ -196,7 +230,6 @@ a:hover {
   padding: 20px;
   margin: 15px;
   cursor: pointer;
-
 }
 
 .perfil-img {
@@ -232,7 +265,6 @@ a:hover {
 .name-user span {
   color: #979797;
   font-size: 1.1rem;
-
 }
 
 .resenas {
@@ -250,4 +282,44 @@ a:hover {
 .comentarios_clientes p {
   color: #4b4b4b;
   font-size: 15PX
+}
+
+/********** FOOTER **********/
+.footer-padding {
+  padding: 6% 5%;
+}
+
+.footer-text {
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+.footer-text span {
+  font-weight: 500;
+}
+
+.footer-text span:hover {
+  color: var(--secondary-light);
+}
+
+@media only screen and (min-width: 600px) {
+  .footer-padding {
+    padding: 3% 5%;
+  }
+
+  .footer-text {
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .inicio-titulo {
+    font-size: 3.2rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .footer-padding {
+    padding: 2% 5%;
+  }
 }
