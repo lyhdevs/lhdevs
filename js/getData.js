@@ -1,5 +1,7 @@
 let miembrosEquipoItem = document.getElementById("equipo-miembros");
+let proyectosItem = document.getElementById("proyectos-item");
 
+/* Crea la "tarjeta" por cada miembro de equipo */
 function crearEquipo(equipo){
   equipo.forEach(miembro => {
     let miembroItem = document.createElement("div");
@@ -20,12 +22,41 @@ function crearEquipo(equipo){
         </div>
       </div>
       `;
-    document.getElementById("equipo-miembros").appendChild(miembroItem);
+      miembrosEquipoItem.appendChild(miembroItem);
+  });
+}
+
+function truncate(str, n, useWordBoundary) {
+  if (str.length <= n) { return str; }
+  const subString = str.substr(0, n-1);
+
+  return (useWordBoundary 
+    ? subString.substr(0, subString.lastIndexOf(" ")) 
+    : subString) + "&hellip;";
+};
+
+
+/* Crea la "tarjeta" por cada proyecto */
+function crearProyecto(proyectos){
+  proyectos.forEach(proy => {
+    let proyItem = document.createElement("div");
+    proyItem.classList.add("card");
+
+
+    proyItem.innerHTML = `
+      <img class="card-img-top" src="${proy.imgUrl}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">${proy.nombre}</h5>
+        <p class="card-text"><small class="text-muted">${proy.tipo}</small></p>
+        <p class="card-text">${truncate(proy.descripcion, 84, true)} <a> Ver más</a></p>
+      </div>
+    `;
+
+    proyectosItem.appendChild(proyItem);
   });
 }
 
 fetch("/data/data.json").then(response => response.json()).then(data => {
   crearEquipo(data.equipo);
+  crearProyecto(data.proyectos);
 });
-
-
