@@ -27,3 +27,5 @@ function crearEquipo(equipo){
 fetch("/data/data.json").then(response => response.json()).then(data => {
   crearEquipo(data.equipo);
 });
+
+
