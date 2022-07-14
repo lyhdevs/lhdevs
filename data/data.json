@@ -22,5 +22,25 @@
       "instagramUrl": "http://instagram.com/melissahuerta.dev/",
       "portfolioUrl": "https://melissahuerta.dev"
     }
+  ],
+  "proyectos": [
+    {
+      "key": 1,
+      "nombre": "Web Estudio A&L",
+      "tipo": "Web Informativa",
+      "empresa": "Estudio Jurídico A&L",
+      "descripcion": "Esta web informativa permitió al estudio jurídico Armas & Leyva posicionarse en la web, dando accesibilidad a los servicios ofrecidos a sus futuros clientes. La página web contiene información de los trabajadores del estudio, servicios ofrecidos, enlaces a redes sociales y datos de contacto. ",
+      "imgUrl": "../img/proy/proy1.png",
+      "url": "http://www.estudioarmasyleyva.com"
+    },
+    {
+      "key": 2,
+      "nombre": "E-commerce Disquete Galaxico",
+      "tipo": "Tienda en línea",
+      "empresa": "Disquete Galaxico",
+      "descripcion": "Esta tienda en línea permitió al emprendimiento peruano Disquete Galaxico publicar los productos, servicios y ofertas disponibles, como también concretar y aumentar ventas en un 50%",
+      "imgUrl": "../img/proy/proy2.png",
+      "url": "http://www.disquetegalaxico.com"
+    }
   ]
 }

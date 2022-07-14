@@ -21,7 +21,6 @@ body {
   --secondary: white;
   --secondary-light: gray;
   --dark1: black;
-  --dark2: black;
   --dark-blue: hsl(198, 62%, 26%);
   --very-dark-grayish-blue: hsl(232, 10%, 55%);
 }
@@ -35,6 +34,7 @@ a:hover {
 p {
   margin-bottom: 0;
 }
+
 /********** MENU **********/
 span{
   color:hsl(198, 62%, 26%);
@@ -104,6 +104,10 @@ nav button#close-menu-btn{
 
 
 /********** INICIO **********/
+#inicio {
+  margin-top: 80px;
+}
+
 .background-inicio {
   background-image: url("./img/fondo-desktop.jpg");
   background-repeat: no-repeat;
@@ -132,25 +136,37 @@ nav button#close-menu-btn{
   margin-top: 20px;
 }
 
-/*POR QUE ELERGIRNOS?*/
 
-.porque {
-  background: white;
+/********** PROYECTOS **********/
+.card-body h5, .card-title {
+  margin-bottom: 0;
+}
+
+.card-text {
+  margin-bottom: 0.27rem;
+}
+
+.card-body a{
+  color: var(--primary) !important;
+}
+
+.card-body a:hover{
+  color: var(--dark-blue) !important;
+}
+
+
+
+
+/*POR QUE ELERGIRNOS?*/
+.porque-items {
   text-align: center;
   columns: 3 300px;
-  margin: 100px;
-
 }
 
 .porque_title {
   justify-content: center;
   text-align: center;
-  font-size: 30px;
   letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--very-dark-grayish-blue);
-  font-family: var (--font1);
-
 }
 
 .porque_container {
@@ -200,13 +216,21 @@ nav button#close-menu-btn{
   color: var(--secondary);
 }
 
+.titulo {
+  font-family: 'Patua One', cursive;
+  font-size: 1.6rem;
+  color: var(--very-dark-grayish-blue);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
 /********** EQUIPO **********/
 .equipo {
   font-family: 'Anek Malayalam', sans-serif;
 }
 
-.equipo-texto h1 {
-  font-family: 'Patua One', cursive;
+.equipo .titulo {
+  color: var(--secondary);
 }
 
 .img-fluid {
@@ -240,13 +264,11 @@ nav button#close-menu-btn{
 
 /*comentarios*/
 .testimonios {
-  font-size: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
-
 }
 
 .testimonios_header {
@@ -339,6 +361,7 @@ nav button#close-menu-btn{
 
 .footer-text span {
   font-weight: 500;
+  color: var(--secondary);
 }
 
 .footer-text span:hover {
@@ -360,13 +383,19 @@ nav button#close-menu-btn{
     font-size: 3.2rem;
   }
  
+  .titulo {
+    font-size: 1.825rem;
+  }
 }
 
 @media only screen and (min-width: 992px) {
   .footer-padding {
     padding: 2% 5%;
   }
-  
+
+  .titulo {
+    font-size: 2rem;
+  }
 }
 @media only screen and (min-width: 992px) {
  
@@ -419,7 +448,10 @@ nav button#close-menu-btn{
     place-items: center;
   }
  
- 
+  /* POR QUÉ ELEGIRNOS?*/
+  .porque {
+    margin: 100px;
+  }
 }
   
 
