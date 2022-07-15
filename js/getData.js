@@ -56,7 +56,7 @@ function crearProyecto(proyectos){
   });
 }
 
-fetch("/data/data.json").then(response => response.json()).then(data => {
+fetch("https://lyhdevs.github.io/lhdevs/data/data.json").then(response => response.json()).then(data => {
   crearEquipo(data.equipo);
   crearProyecto(data.proyectos);
 });
