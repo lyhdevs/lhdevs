@@ -49,6 +49,45 @@ function truncate(str, n, useWordBoundary) {
 /* Crea la "tarjeta" por cada proyecto */
 function crearProyecto(proyectos){
   proyectos.forEach(proy => {
+    /* Crea el "modal" por cada proyecto */
+    let proyModalItem = document.createElement("div");
+    proyModalItem.innerHTML = `
+      <div class="modal fade bd-example-modal-lg" id="modalPry${proy.key}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div>
+                <h5 class="modal-title" id="exampleModalLongTitle">${proy.nombre}</h5>
+                <p class="card-text"><small class="text-muted">${proy.tipo}</small></p>
+              </div>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-sm-12 col-md-7">
+                  <img class="card-img-top" src="${proy.imgUrl}" alt="">
+                </div>
+                <div class="col-sm-12 col-md-5 proy-desc">
+                  <p class="card-text">${proy.descripcion}</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Genial!</button>
+              <a href="${proy.url}" target="_blanl" type="button" class="btn-pink">Visitar sitio</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    proyectosItem.appendChild(proyModalItem);
+
+    /* Crea la "tarjeta" por cada proyecto */
     let proyItem = document.createElement("div");
     proyItem.classList.add("card");
 
@@ -57,7 +96,11 @@ function crearProyecto(proyectos){
       <div class="card-body">
         <h5 class="card-title">${proy.nombre}</h5>
         <p class="card-text"><small class="text-muted">${proy.tipo}</small></p>
-        <p class="card-text">${truncate(proy.descripcion, 84, true)} <a> Ver más</a></p>
+        <p class="card-text">${truncate(proy.descripcion, 84, true)} 
+          <button type="button" class="btn-masinfo" data-toggle="modal" data-target="#modalPry${proy.key}">
+            Ver más 
+          </button>
+        </p>
       </div>
     `;
 
@@ -70,3 +113,5 @@ fetch("/data/data.json").then(response => response.json()).then(data => {
   crearEquipo(data.equipo);
   crearProyecto(data.proyectos);
 });
+
+//fetch("https://lyhdevs.github.io/lhdevs/data/data.json")
