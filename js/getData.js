@@ -1,5 +1,6 @@
 let miembrosEquipoItem = document.getElementById("equipo-miembros");
 let proyectosItem = document.getElementById("proyectos-item");
+let testimoniosItem = document.getElementById("testimonios-item");
 
 /* Inserta datos generales como e-mail, web url, etc */
 function insertarDatos(datos){
@@ -9,31 +10,6 @@ function insertarDatos(datos){
   $("#mailto").attr("href", `mailto:${datos.email}`);
   emailElement.append(datos.email);
   ubicacionElement.append(datos.ubicacion);
-}
-
-/* Crea la "tarjeta" por cada miembro de equipo */
-function crearEquipo(equipo){
-  equipo.forEach(miembro => {
-    let miembroItem = document.createElement("div");
-    miembroItem.classList.add("col-lg-6", "col-md-12", "col-sm-12", "col-12", "miembro");
-    //TODO: Reemplazar img
-    miembroItem.innerHTML = `
-      <div class="row">
-        <div class="col-lg-5 col-md-6 col-sm-6 col-6">
-          <img src="./img/developer.jpg" class="img-fluid" alt="">
-        </div>
-        <div class="col-lg-7 col-md-6 col-sm-6 col-6">
-          <h4 class="miembro-nombre">${miembro.nombre}</h4>
-          <small class="miembro-posicion">${miembro.posicion.toUpperCase()}</small>
-          <p class="miembro-descripcion">${miembro.descripcion}</p>
-          <span> <a href="${miembro.portfolioUrl}" target="_blank"><i class="fa-solid fa-laptop-code"></i></a></span>
-          <span> <a href="${miembro.linkedinUrl}" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></span>
-          <span> <a href="${miembro.instagramUrl}" target="_blank"><i class="fa-brands fa-instagram"></i></a></span>
-        </div>
-      </div>
-      `;
-      miembrosEquipoItem.appendChild(miembroItem);
-  });
 }
 
 /* Corta el texto a una determinada cantidad de caracteres */
@@ -46,10 +22,10 @@ function truncate(str, n, useWordBoundary) {
     : subString) + "&hellip;";
 };
 
-/* Crea la "tarjeta" por cada proyecto */
+/* Crea la "tarjeta" y modal por cada proyecto */
 function crearProyecto(proyectos){
   proyectos.forEach(proy => {
-    /* Crea el "modal" por cada proyecto */
+    /* Modal */
     let proyModalItem = document.createElement("div");
     proyModalItem.innerHTML = `
       <div class="modal fade bd-example-modal-lg" id="modalPry${proy.key}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -87,7 +63,7 @@ function crearProyecto(proyectos){
 
     proyectosItem.appendChild(proyModalItem);
 
-    /* Crea la "tarjeta" por cada proyecto */
+    /* Tarjeta */
     let proyItem = document.createElement("div");
     proyItem.classList.add("card");
 
@@ -108,10 +84,76 @@ function crearProyecto(proyectos){
   });
 }
 
+/* Crea la "tarjeta" por cada miembro de equipo */
+function crearEquipo(equipo){
+  equipo.forEach(miembro => {
+    let miembroItem = document.createElement("div");
+    miembroItem.classList.add("col-lg-6", "col-md-12", "col-sm-12", "col-12", "miembro");
+    //TODO: Reemplazar img
+    miembroItem.innerHTML = `
+      <div class="row">
+        <div class="col-lg-5 col-md-6 col-sm-6 col-6">
+          <img src="./img/developer.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-7 col-md-6 col-sm-6 col-6">
+          <h4 class="miembro-nombre">${miembro.nombre}</h4>
+          <small class="miembro-posicion">${miembro.posicion.toUpperCase()}</small>
+          <p class="miembro-descripcion">${miembro.descripcion}</p>
+          <span> <a href="${miembro.portfolioUrl}" target="_blank"><i class="fa-solid fa-laptop-code"></i></a></span>
+          <span> <a href="${miembro.linkedinUrl}" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></span>
+          <span> <a href="${miembro.instagramUrl}" target="_blank"><i class="fa-brands fa-instagram"></i></a></span>
+        </div>
+      </div>
+      `;
+      miembrosEquipoItem.appendChild(miembroItem);
+  });
+}
+
+/* Crea la "tarjeta" por cada testimonio */
+function crearTestimonios(testimonios){
+  testimonios.forEach(testimonio => {
+    let testimonioItem = document.createElement("div");
+
+    testimonioItem.classList.add("testimonios_caja");
+    testimonioItem.innerHTML = `
+      <div class="caja-top">
+        <div class="perfil">
+          <div class="perfil-img">
+            <img src="/img/persona2.jpg" alt="">
+          </div>
+          
+          <!-- nombre y usuario-->
+          <div class="name-user">
+            <strong>${testimonio.cliente}</strong>
+            <span>@${testimonio.usuario}</span>
+          </div>
+        </div>
+        
+        <!-- rating -->
+        <div class="rating">
+          <ion-icon name="star-half-outline"></ion-icon>
+          <ion-icon name="star-half-outline"></ion-icon>
+          <ion-icon name="star-half-outline"></ion-icon>
+          <ion-icon name="star-half-outline"></ion-icon>
+          <ion-icon name="star-half-outline"></ion-icon>
+        </div>
+      </div>
+      
+      <!-- comentarios-->
+      <div class="comentarios_clientes">
+        <p>${testimonio.testimonio}</p>
+      </div>
+    `;
+    
+    testimoniosItem.appendChild(testimonioItem); 
+  });
+}
+
 fetch("/data/data.json").then(response => response.json()).then(data => {
   insertarDatos(data.datos);
-  crearEquipo(data.equipo);
   crearProyecto(data.proyectos);
+  crearEquipo(data.equipo);
+  crearTestimonios(data.testimonios);
 });
 
 //fetch("https://lyhdevs.github.io/lhdevs/data/data.json")
