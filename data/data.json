@@ -51,14 +51,18 @@
   ],
   "testimonios": [
     {
+      "key": 1,
       "cliente": "Estudio Jurídico A&L",
       "usuario": "estudiojuridicoarmasyleyva",
+      "imgUrl": "../img/clientes/cliente1.png",
       "testimonio": "La página me parece excelente conforme a lo que solicité, también agradezco que hayan podido apoyarnos con algunas cosas que no comprendíamos y sobre temas importantes como la orientación para poder posicionarnos en Google maps, LinkedIn, etc. </br> Recomiendo su trabajo al 100% 👍🏻👏🏽",
       "calificacion": 5
     },
     {
+      "key": 2,
       "cliente": "Disquete Galaxico",
       "usuario": "disquetegalaxico",
+      "imgUrl": "../img/clientes/cliente2.png",
       "testimonio": "Estamos recontra felices con nuestra nueva página, comprendieron lo que queriamos y estabamos buscando 💜.</br>Ahora estamos trabajando en un segundo proyecto, gracias!",
       "calificacion": 5
     }
