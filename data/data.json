@@ -47,6 +47,15 @@
       "descripcion": "Esta tienda en línea permitió al emprendimiento peruano Disquete Galaxico publicar los productos, servicios y ofertas disponibles, como también concretar y aumentar ventas en un 50%",
       "imgUrl": "../img/proy/proy2.png",
       "url": "http://www.disquetegalaxico.com"
+    },
+    {
+      "key": 3,
+      "nombre": "Web Profesional",
+      "tipo": "Portafolio Web",
+      "empresa": "Freelancer Melissa Huerta",
+      "descripcion": "Este portafolio web profesional permitió a Melissa Huerta mostrar su flujo de trabajo, servicios ofrecidos y proyectos realizados.",
+      "imgUrl": "../img/proy/proy3.png",
+      "url": "http://melissahuerta.dev"
     }
   ],
   "testimonios": [
@@ -64,6 +73,14 @@
       "usuario": "disquetegalaxico",
       "imgUrl": "../img/clientes/cliente2.png",
       "testimonio": "Estamos recontra felices con nuestra nueva página, comprendieron lo que queriamos y estabamos buscando 💜.</br>Ahora estamos trabajando en un segundo proyecto, gracias!",
+      "calificacion": 5
+    },
+    {
+      "key": 3,
+      "cliente": "Melissa Huerta",
+      "usuario": "melissahuertadev",
+      "imgUrl": "../img/clientes/cliente3.png",
+      "testimonio": "Mi personalidad y forma de trabajo han quedado completamente reflejados en mi portafolio web. Muchas gracias!",
       "calificacion": 5
     }
   ]
