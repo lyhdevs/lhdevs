@@ -1,6 +1,16 @@
 let miembrosEquipoItem = document.getElementById("equipo-miembros");
 let proyectosItem = document.getElementById("proyectos-item");
 
+/* Inserta datos generales como e-mail, web url, etc */
+function insertarDatos(datos){
+  let emailElement = document.getElementById("lyhemail");
+  let ubicacionElement = document.getElementById("lyhlocation");
+
+  $("#mailto").attr("href", `mailto:${datos.email}`);
+  emailElement.append(datos.email);
+  ubicacionElement.append(datos.ubicacion);
+}
+
 /* Crea la "tarjeta" por cada miembro de equipo */
 function crearEquipo(equipo){
   equipo.forEach(miembro => {
@@ -26,6 +36,7 @@ function crearEquipo(equipo){
   });
 }
 
+/* Corta el texto a una determinada cantidad de caracteres */
 function truncate(str, n, useWordBoundary) {
   if (str.length <= n) { return str; }
   const subString = str.substr(0, n-1);
@@ -35,13 +46,11 @@ function truncate(str, n, useWordBoundary) {
     : subString) + "&hellip;";
 };
 
-
 /* Crea la "tarjeta" por cada proyecto */
 function crearProyecto(proyectos){
   proyectos.forEach(proy => {
     let proyItem = document.createElement("div");
     proyItem.classList.add("card");
-
 
     proyItem.innerHTML = `
       <img class="card-img-top" src="${proy.imgUrl}" alt="Card image cap">
@@ -57,6 +66,7 @@ function crearProyecto(proyectos){
 }
 
 fetch("/data/data.json").then(response => response.json()).then(data => {
+  insertarDatos(data.datos);
   crearEquipo(data.equipo);
   crearProyecto(data.proyectos);
 });

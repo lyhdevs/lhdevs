@@ -1,4 +1,10 @@
 {
+  "datos": 
+  {
+    "url": "https://lyhdevs.github.io/lhdevs/",
+    "email": "lyhdevs@gmail.com",
+    "ubicacion": "Lima, Perú"
+  },
   "equipo": [
     {
       "key": 1,
