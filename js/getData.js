@@ -167,11 +167,8 @@ function crearTestimonios(testimonios){
   });
 }
 
-fetch("/data/data.json").then(response => response.json()).then(data => {
-  insertarDatos(data.datos);
+fetch("https://lyhdevs.github.io/lhdevs/data/data.json").then(response => response.json()).then(data => {
   crearProyecto(data.proyectos);
   crearEquipo(data.equipo);
   crearTestimonios(data.testimonios);
 });
-
-//fetch("https://lyhdevs.github.io/lhdevs/data/data.json")
