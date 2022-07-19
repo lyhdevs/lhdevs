@@ -294,7 +294,7 @@ nav button#close-menu-btn {
   color: var(--primary);
 }
 
-/*comentarios*/
+/********** TESTIMONIOS **********/
 .testimonios {
   display: flex;
   justify-content: center;
@@ -303,17 +303,7 @@ nav button#close-menu-btn {
   width: 100%;
 }
 
-.testimonios_header {
-  margin: 50px 0px;
-  padding: 10px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .testimonios_contenedor {
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -321,12 +311,24 @@ nav button#close-menu-btn {
 }
 
 .testimonios_caja {
-  width: 500px;
+  max-width: 380px;
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
   background-color: white;
   padding: 20px;
-  margin: 15px;
+  margin: 15px auto;
   cursor: pointer;
+}
+
+/* Imagn, Datos de cliente, Rating*/
+.caja-top {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
 }
 
 .perfil-img {
@@ -334,19 +336,7 @@ nav button#close-menu-btn {
   height: 50px;
   border-radius: 50%;
   overflow: hidden;
-  margin-right: 30px;
-}
-
-.perfil-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: center;
-}
-
-.perfil {
-  display: flex;
-  align-items: center;
-
+  margin-right: 12px;
 }
 
 .name-user {
@@ -356,29 +346,26 @@ nav button#close-menu-btn {
 
 .name-user strong {
   color: #3d3d3d;
-  font-size: 1.3rem;
+  font-size: 1rem;
+  /* font-size: 1.3rem; */
 }
 
 .name-user span {
   color: #979797;
-  font-size: 1.1rem;
+  font-size: 0.825rem;
+  /* font-size: 1.1rem; */
 }
 
-.resenas {
+.rating {
+  text-align: center;
   color: #f9d71c;
-
-}
-
-.caja-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
 }
 
 .comentarios_clientes p {
+  text-align: justify;
   color: #4b4b4b;
-  font-size: 15PX
+  font-size: 12px;
+  /*font-size: 15px;*/
 }
 
 /********** FOOTER **********/
@@ -408,6 +395,25 @@ nav button#close-menu-btn {
   .footer-text {
     margin: auto;
   }
+
+
+  /********** TESTIMONIOS **********/
+  .testimonios_contenedor {
+    display: flex;
+  }
+
+  .testimonios_caja {
+    max-width: 500px;
+  }
+
+  /* Imagn, Datos de cliente, Rating*/
+  .caja-top {
+    display: flex;
+  }
+
+  .perfil-img {
+    margin-right: 30px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -417,6 +423,24 @@ nav button#close-menu-btn {
 
   .titulo {
     font-size: 1.825rem;
+  }
+
+  /********** TESTIMONIOS **********/
+  /* Imagn, Datos de cliente, Rating*/
+  .perfil-img {
+    margin-right: 30px;
+  }
+
+  .name-user strong {
+    font-size: 1.3rem;
+  }
+
+  .name-user span {
+    font-size: 1.1rem;
+  }
+
+  .comentarios_clientes p {
+    font-size: 15px;
   }
 }
 
