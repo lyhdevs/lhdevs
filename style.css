@@ -160,6 +160,11 @@ nav button#close-menu-btn {
 }
 
 /********** PROYECTOS **********/
+#proyectos .card {
+  min-width: 204px;
+  margin-bottom: 15px;
+}
+
 .card-body h5,
 .card-title {
   margin-bottom: 0;
@@ -453,11 +458,17 @@ nav button#close-menu-btn {
     font-size: 2rem;
   }
 
+  /********** PROYECTOS **********/
+  #proyectos .card {
+    margin-bottom: 0;
+  }
+
   .proy-desc .card-text {
     font-size: 1rem;
     margin: 0;
   }
 
+  /********** BARRA DE NAVEGACIÓN **********/
   nav button#close-menu-btn {
     display: none;
   }

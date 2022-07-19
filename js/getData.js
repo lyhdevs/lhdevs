@@ -109,18 +109,42 @@ function crearEquipo(equipo){
   });
 }
 
+function rating(rate, id){
+  let filled = Math.floor(rate);
+  let half = (rate - filled)/0.5;
+  let rest = Math.floor(5 - rate);
+
+  let ratingItem = document.createElement("div");
+  ratingItem.classList.add("rating"); 
+  
+  for(let i = 0; i < filled; i++) {
+    ratingItem.innerHTML += "<ion-icon name=\"star\"></ion-icon>";
+  }
+
+  for(let i = 0; i < half; i++) {
+    ratingItem.innerHTML += "<ion-icon name=\"star-half-outline\"></ion-icon>";
+  }
+  
+  for(let i = 0; i < rest; i++) {
+    ratingItem.innerHTML += "<ion-icon name=\"star-outline\"></ion-icon>"
+  }
+
+ return ratingItem;
+}
+
+
 /* Crea la "tarjeta" por cada testimonio */
 function crearTestimonios(testimonios){
   testimonios.forEach(testimonio => {
     let testimonioItem = document.createElement("div");
+    let ratingItem = rating(testimonio.calificacion, testimonio.key).outerHTML;
 
     testimonioItem.classList.add("testimonios_caja");
     testimonioItem.innerHTML = `
       <div class="caja-top">
         <div class="perfil">
-          <div class="perfil-img">
-            <img src="/img/persona2.jpg" alt="">
-          </div>
+          <!-- img -->
+          <img class="perfil-img" src="${testimonio.imgUrl}" alt="">
           
           <!-- nombre y usuario-->
           <div class="name-user">
@@ -130,13 +154,7 @@ function crearTestimonios(testimonios){
         </div>
         
         <!-- rating -->
-        <div class="rating">
-          <ion-icon name="star-half-outline"></ion-icon>
-          <ion-icon name="star-half-outline"></ion-icon>
-          <ion-icon name="star-half-outline"></ion-icon>
-          <ion-icon name="star-half-outline"></ion-icon>
-          <ion-icon name="star-half-outline"></ion-icon>
-        </div>
+        ${ratingItem}
       </div>
       
       <!-- comentarios-->
