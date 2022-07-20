@@ -1,4 +1,10 @@
 {
+  "datos": 
+  {
+    "url": "https://lyhdevs.github.io/lhdevs/",
+    "email": "lyhdevs@gmail.com",
+    "ubicacion": "Lima, Perú"
+  },
   "equipo": [
     {
       "key": 1,
@@ -41,6 +47,41 @@
       "descripcion": "Esta tienda en línea permitió al emprendimiento peruano Disquete Galaxico publicar los productos, servicios y ofertas disponibles, como también concretar y aumentar ventas en un 50%",
       "imgUrl": "../img/proy/proy2.png",
       "url": "http://www.disquetegalaxico.com"
+    },
+    {
+      "key": 3,
+      "nombre": "Web Profesional",
+      "tipo": "Portafolio Web",
+      "empresa": "Freelancer Melissa Huerta",
+      "descripcion": "Este portafolio web profesional permitió a Melissa Huerta mostrar su flujo de trabajo, servicios ofrecidos y proyectos realizados.",
+      "imgUrl": "../img/proy/proy3.png",
+      "url": "http://melissahuerta.dev"
+    }
+  ],
+  "testimonios": [
+    {
+      "key": 1,
+      "cliente": "Estudio Jurídico A&L",
+      "usuario": "estudiojuridicoarmasyleyva",
+      "imgUrl": "../img/clientes/cliente1.png",
+      "testimonio": "La página me parece excelente conforme a lo que solicité, también agradezco que hayan podido apoyarnos con algunas cosas que no comprendíamos y sobre temas importantes como la orientación para poder posicionarnos en Google maps, LinkedIn, etc. </br> Recomiendo su trabajo al 100% 👍🏻👏🏽",
+      "calificacion": 5
+    },
+    {
+      "key": 2,
+      "cliente": "Disquete Galaxico",
+      "usuario": "disquetegalaxico",
+      "imgUrl": "../img/clientes/cliente2.png",
+      "testimonio": "Estamos recontra felices con nuestra nueva página, comprendieron lo que queriamos y estabamos buscando 💜.</br>Ahora estamos trabajando en un segundo proyecto, gracias!",
+      "calificacion": 5
+    },
+    {
+      "key": 3,
+      "cliente": "Melissa Huerta",
+      "usuario": "melissahuertadev",
+      "imgUrl": "../img/clientes/cliente3.png",
+      "testimonio": "Mi personalidad y forma de trabajo han quedado completamente reflejados en mi portafolio web. Muchas gracias!",
+      "calificacion": 5
     }
   ]
 }
