@@ -68,7 +68,7 @@ function crearProyecto(proyectos){
     proyItem.classList.add("card");
 
     proyItem.innerHTML = `
-      <img class="card-img-top" src="${proy.imgUrl}" alt="Card image cap">
+      <img class="card-img-top" src="https://github.com/lyhdevs/lhdevs/blob/main/+${proy.imgUrl}" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">${proy.nombre}</h5>
         <p class="card-text"><small class="text-muted">${proy.tipo}</small></p>
