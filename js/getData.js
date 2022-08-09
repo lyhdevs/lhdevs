@@ -90,7 +90,6 @@ function crearEquipo(equipo){
   equipo.forEach(miembro => {
     let miembroItem = document.createElement("div");
     miembroItem.classList.add("col-lg-6", "col-md-12", "col-sm-12", "col-12", "miembro");
-    //TODO: Reemplazar img
     miembroItem.innerHTML = `
       <div class="row">
         <div class="col-lg-5 col-md-6 col-sm-6 col-6">
