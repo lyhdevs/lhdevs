@@ -24,6 +24,7 @@ function truncate(str, n, useWordBoundary) {
 
 /* Crea la "tarjeta" y modal por cada proyecto */
 function crearProyecto(proyectos){
+  console.log(proyectos);
   proyectos.forEach(proy => {
     /* Modal */
     let proyModalItem = document.createElement("div");
@@ -93,7 +94,7 @@ function crearEquipo(equipo){
     miembroItem.innerHTML = `
       <div class="row">
         <div class="col-lg-5 col-md-6 col-sm-6 col-6">
-          <img src="./img/developer.jpg" class="img-fluid" alt="">
+          <img src="${miembro.imgUrl} class="img-fluid" alt="">
         </div>
         <div class="col-lg-7 col-md-6 col-sm-6 col-6">
           <h4 class="miembro-nombre">${miembro.nombre}</h4>
@@ -168,6 +169,7 @@ function crearTestimonios(testimonios){
 }
 
 fetch("https://lyhdevs.github.io/lhdevs/data/data.json").then(response => response.json()).then(data => {
+  insertarDatos(data.datos)
   crearProyecto(data.proyectos);
   crearEquipo(data.equipo);
   crearTestimonios(data.testimonios);
