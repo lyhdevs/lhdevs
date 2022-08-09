@@ -93,7 +93,7 @@ function crearEquipo(equipo){
     miembroItem.innerHTML = `
       <div class="row">
         <div class="col-lg-5 col-md-6 col-sm-6 col-6">
-          <img src="${miembro.imgUrl} class="img-fluid" alt="">
+          <img src="${miembro.imgUrl}" class="img-fluid" alt="">
         </div>
         <div class="col-lg-7 col-md-6 col-sm-6 col-6">
           <h4 class="miembro-nombre">${miembro.nombre}</h4>
