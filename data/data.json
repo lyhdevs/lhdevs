@@ -12,7 +12,7 @@
       "nombre": "Lorenna León",
       "posicion": "Desarrolladora de Software",
       "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      "imgUrl": "",
+      "imgUrl": "img/team/lorenna-leon.png",
       "linkedinUrl": "",
       "instagramUrl": "http://instagram.com/lore_lung",
       "portfolioUrl": ""
@@ -23,7 +23,7 @@
       "nombre": "Melissa Huerta",
       "posicion": "Desarrolladora de Software",
       "descripcion": "Desarrolladora de software profesional con más de 3 años de experiencia en aplicaciones web y móviles.",
-      "imgUrl": "",
+      "imgUrl": "img/team/melissa-huerta.png",
       "linkedinUrl": "https://www.linkedin.com/in/melissahuertadev/",
       "instagramUrl": "http://instagram.com/melissahuerta.dev/",
       "portfolioUrl": "https://melissahuerta.dev"
@@ -55,7 +55,16 @@
       "empresa": "Freelancer Melissa Huerta",
       "descripcion": "Este portafolio web profesional permitió a Melissa Huerta mostrar su flujo de trabajo, servicios ofrecidos y proyectos realizados.",
       "imgUrl": "img/proy/proy3.png",
-      "url": "http://melissahuerta.dev"
+      "url": "https://www.melissahuerta.dev"
+    },
+    {
+      "key": 4,
+      "nombre": "Web Profesional",
+      "tipo": "Portafolio Web",
+      "empresa": "Freelancer Lorenna León",
+      "descripcion": "En este portafolio web profesional, Lorenna León muestra sus proyectos realizados, como también su experiencia y conocimientos.",
+      "imgUrl": "img/proy/proy4.png",
+      "url": "http://www.lorennaleon.com"
     }
   ],
   "testimonios": [
@@ -63,7 +72,7 @@
       "key": 1,
       "cliente": "Estudio Jurídico A&L",
       "usuario": "estudiojuridicoarmasyleyva",
-      "imgUrl": "../img/clientes/cliente1.png",
+      "imgUrl": "img/clientes/cliente1.png",
       "testimonio": "La página me parece excelente conforme a lo que solicité, también agradezco que hayan podido apoyarnos con algunas cosas que no comprendíamos y sobre temas importantes como la orientación para poder posicionarnos en Google maps, LinkedIn, etc. </br> Recomiendo su trabajo al 100% 👍🏻👏🏽",
       "calificacion": 5
     },
@@ -71,7 +80,7 @@
       "key": 2,
       "cliente": "Disquete Galaxico",
       "usuario": "disquetegalaxico",
-      "imgUrl": "../img/clientes/cliente2.png",
+      "imgUrl": "img/clientes/cliente2.png",
       "testimonio": "Estamos recontra felices con nuestra nueva página, comprendieron lo que queriamos y estabamos buscando 💜.</br>Ahora estamos trabajando en un segundo proyecto, gracias!",
       "calificacion": 5
     },
@@ -79,7 +88,7 @@
       "key": 3,
       "cliente": "Melissa Huerta",
       "usuario": "melissahuertadev",
-      "imgUrl": "../img/clientes/cliente3.png",
+      "imgUrl": "img/clientes/cliente3.png",
       "testimonio": "Mi personalidad y forma de trabajo han quedado completamente reflejados en mi portafolio web. Muchas gracias!",
       "calificacion": 5
     }
