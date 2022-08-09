@@ -450,6 +450,15 @@ nav button#close-menu-btn {
 }
 
 @media only screen and (min-width: 992px) {
+  /********** NAV **********/
+  .nav_menu li {
+    height: fit-content;
+  }
+  
+  .nav_menu li a {
+    box-shadow: 0 0 0 black;
+  }
+
   .footer-padding {
     padding: 2% 5%;
   }
