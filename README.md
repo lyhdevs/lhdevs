@@ -2,8 +2,8 @@
 
 Somos LyhDevs: un dúo de desarrolladoras peruanas (León & Huerta) creando soluciones web modernas, rápidas y pensadas para pequeñas empresas y proyectos creativos.
 
-Este repositorio contiene la evolución de nuestro portafolio:
-```/v1``` Primera versión del sitio (HTML, CSS y JS).
+Este repositorio contiene la evolución de nuestro portafolio:   
+```/v1``` Primera versión del sitio (HTML, CSS y JS).   
 ```/v2-react``` Nueva propuesta desarrollada con React, con un diseño más moderno, accesible y escalable.
 
 ## Nueva propuesta (v2)
